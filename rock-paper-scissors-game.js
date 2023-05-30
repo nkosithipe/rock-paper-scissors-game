@@ -6,4 +6,3 @@ function getComputerChoice(){
     const computerChoice = options[computerOptions];
     return computerChoice;
 }
-console.log(getComputerChoice());
