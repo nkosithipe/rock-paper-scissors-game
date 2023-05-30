@@ -26,6 +26,12 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = 'rock';
+// Function for getting the player's choice with a case-insensitive parameter.    
+function getPlayerChoice(){
+    let playerChoice = prompt('Rock, Paper or Scissors.').toLowerCase();
+    return playerChoice;
+}
+//Test for playRound() function
+const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
