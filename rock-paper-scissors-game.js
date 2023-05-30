@@ -14,15 +14,15 @@ function playRound(playerSelection, computerSelection){
     console.log(`Computer chose ${computerSelection}`);
     
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||(playerSelection == 'scissors' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'rock')){
-        console.log(`You Win! ${playerSelection} beats ${computerSelection} `);
-        playerScore++;
+        return `You Win! ${playerSelection} beats ${computerSelection} `;
+        
     }else if (( computerSelection== 'rock' &&  playerSelection== 'scissors') || (computerSelection == 'scissors' && playerSelection == 'paper') ||
     (computerSelection == 'paper' && playerSelection == 'rock')){
-        console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
-        computerScore++;
+        return `You Lose! ${computerSelection} beats ${playerSelection}.`;
+        
     }else{
-        console.log('It\'s a Tie!');
-        return 'Tie';
+        return 'It\'s a Tie!';
+        
     }
 }
 
