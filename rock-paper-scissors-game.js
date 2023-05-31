@@ -1,4 +1,6 @@
 const options = ['rock', 'paper', 'scissors'];
+let computerScore = 0;
+let playerScore = 0;
 
 //Function that Randomly picks an option as a computer choice/selection.
 function getComputerChoice(){
@@ -15,10 +17,12 @@ function playRound(playerSelection, computerSelection){
     
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||(playerSelection == 'scissors' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'rock')){
         return `You Win! ${playerSelection} beats ${computerSelection} `;
+        playerScore++;
         
     }else if (( computerSelection== 'rock' &&  playerSelection== 'scissors') || (computerSelection == 'scissors' && playerSelection == 'paper') ||
     (computerSelection == 'paper' && playerSelection == 'rock')){
         return `You Lose! ${computerSelection} beats ${playerSelection}.`;
+        computerScore++;
         
     }else{
         return 'It\'s a Tie!';
@@ -31,7 +35,3 @@ function getPlayerChoice(){
     let playerChoice = prompt('Rock, Paper or Scissors.').toLowerCase();
     return playerChoice;
 }
-//Test for playRound() function
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
