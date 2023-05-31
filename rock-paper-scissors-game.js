@@ -16,15 +16,16 @@ function playRound(playerSelection, computerSelection){
     console.log(`Computer chose ${computerSelection}`);
     
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||(playerSelection == 'scissors' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'rock')){
-        return `You Win! ${playerSelection} beats ${computerSelection} `;
+        console.log(`You Win! ${playerSelection} beats ${computerSelection} `);
         playerScore++;
         
     }else if (( computerSelection== 'rock' &&  playerSelection== 'scissors') || (computerSelection == 'scissors' && playerSelection == 'paper') ||
     (computerSelection == 'paper' && playerSelection == 'rock')){
-        return `You Lose! ${computerSelection} beats ${playerSelection}.`;
+        console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
         computerScore++;
         
     }else{
+        console.log('This Round has No winner!')
         return 'It\'s a Tie!';
         
     }
@@ -35,3 +36,4 @@ function getPlayerChoice(){
     let playerChoice = prompt('Rock, Paper or Scissors.').toLowerCase();
     return playerChoice;
 }
+ 
