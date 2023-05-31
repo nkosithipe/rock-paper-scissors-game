@@ -36,4 +36,30 @@ function getPlayerChoice(){
     let playerChoice = prompt('Rock, Paper or Scissors.').toLowerCase();
     return playerChoice;
 }
- 
+
+// Function to simulate a 5-round game by invoking the playRound() function in a row.
+function game(){
+    console.log("*** round 1 ***")
+    playRound(getPlayerChoice(), getComputerChoice());
+    console.log("*** round 2 ***")
+    playRound(getPlayerChoice(), getComputerChoice());
+    console.log("*** round 3 ***")
+    playRound(getPlayerChoice(), getComputerChoice());
+    console.log("*** round 4 ***")
+    playRound(getPlayerChoice(), getComputerChoice());
+    console.log("*** round 5 ***")
+    playRound(getPlayerChoice(), getComputerChoice());
+    
+    console.log(`Final Score: Player ${playerScore} - ${computerScore} Computer`);
+    
+    if (playerScore > computerScore) {
+        console.log("You Win the Game!");
+    } else if (playerScore < computerScore) {
+        console.log("You Lose the Game!");
+    } else {
+        console.log("It's a Tie Game!");
+    }
+}
+
+// Call the game function to start playing
+game();
